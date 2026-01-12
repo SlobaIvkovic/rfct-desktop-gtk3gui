@@ -1,0 +1,28 @@
+# Project: LED MATRIX INTERFACE
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = OBJ/main.o
+LINKOBJ  = OBJ/main.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -L"../Ready_Libs/gtk+-3.5.4-1-bundle/lib" -lgtk-3 -lgdk-3 -lgdi32 -limm32 -lshell32 -lole32 -luuid -lpangocairo-1.0 -lpangoft2-1.0 -lfreetype -lfontconfig -lpangowin32-1.0 -lgdi32 -lpango-1.0 -lm -latk-1.0  -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gtk-3.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/atk-1.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/cairo" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/fontconfig" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/freetype2" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gail-3.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gdk-pixbuf-2.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gio-win32-2.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/glib-2.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/libpng15" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/libxml2" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/pango-1.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/lib/glib-2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gtk-3.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/atk-1.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/cairo" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/fontconfig" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/freetype2" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gail-3.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gdk-pixbuf-2.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/gio-win32-2.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/glib-2.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/libpng15" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/libxml2" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/include/pango-1.0" -I"../Ready_Libs/gtk+-3.5.4-1-bundle/lib/glib-2.0/include"
+BIN      = "EXECUTABLE/LED MATRIX INTERFACE.exe"
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32 -mms-bitfields
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+OBJ/main.o: main.c
+	$(CC) -c main.c -o OBJ/main.o $(CFLAGS)
