@@ -31,7 +31,7 @@ static void activate (GtkApplication *app,
   
   
   
-  icon = create_pixbuf("L.jpg");
+  icon = create_pixbuf("../Resources/L.jpg");
 
   /* create a new window, and set its title */
   window = gtk_application_window_new (app);
